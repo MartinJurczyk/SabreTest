@@ -1,18 +1,17 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-class SabreIndexerTest {
-
+public class SabreIndexerTest {
     /**
-    Write a Java program, which will index each letter in a text to words.
-    Program does not have to take letter case into consideration.
-    Words that occur many times in a text must be presented only once in output.
-    List of words in which particular letter occurs, should be sorted alphabetically.
-    **/
+     Write a Java program, which will index each letter in a text to words.
+     Program does not have to take letter case into consideration.
+     Words that occur many times in a text must be presented only once in output.
+     List of words in which particular letter occurs, should be sorted alphabetically.
+     **/
 
     @Test
-    void sabreTest() {
+    public void sabreTest() {
         // given
         SabreIndexer sabreIndexer = new SabreIndexer();
         String expected = "a: ala, javie, kota, ma\n" +
@@ -37,7 +36,7 @@ class SabreIndexerTest {
     }
 
     @Test
-    void caseInsensitiveTest() {
+    public void caseInsensitiveTest() {
         // given
         SabreIndexer sabreIndexer = new SabreIndexer();
         String expected = "a: a\n" +
@@ -51,7 +50,7 @@ class SabreIndexerTest {
     }
 
     @Test
-    void sortedTest() {
+    public void sortedTest() {
         // given
         SabreIndexer sabreIndexer = new SabreIndexer();
         String expected = "a: a, ba, ca, da\n" +
@@ -67,7 +66,7 @@ class SabreIndexerTest {
     }
 
     @Test
-    void duplicationInsensitiveTest() {
+    public void duplicationInsensitiveTest() {
         // given
         SabreIndexer sabreIndexer = new SabreIndexer();
         String expected = "a: duplication\n" +
@@ -91,7 +90,7 @@ class SabreIndexerTest {
     }
 
     @Test
-    void ignoreSpecialMarksAndNumbersTest() {
+    public void ignoreSpecialMarksAndNumbersTest() {
         // given
         SabreIndexer sabreIndexer = new SabreIndexer();
         String expected = "a: aaa\n" +
